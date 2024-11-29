@@ -1,0 +1,195 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+map й q
+map ц w
+map у e
+map к r
+map е t
+map н y
+map г u
+map ш i
+map щ o
+map з p
+map х [
+map ъ ]
+map ф a
+map ы s
+map в d
+map а f
+map п g
+map р h
+map о j
+map л k
+map д l
+map ж ;
+map э '
+map ё \
+map я z
+map ч x
+map с c
+map м v
+map и b
+map т n
+map ь m
+map б ,
+map ю .
+map Й Q
+map Ц W
+map У E
+map К R
+map Е T
+map Н Y
+map Г U
+map Ш I
+map Щ O
+map З P
+map Х {
+map Ъ }
+map Ф A
+map Ы S
+map В D
+map А F
+map П G
+map Р H
+map О J
+map Л K
+map Д L
+map Ж :
+map Э "
+map Я Z
+map Ч X
+map С C
+map М V
+map И B
+map Т N
+map Ь M
+map Б <
+map Ю >
+map Ё /|
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=10
+
+set belloff=all
+
+" fast exit
+imap jj <Esc>
+imap оо <Esc>
+set timeoutlen=1000
+
+" find and replace
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
+
+set number
+set relativenumber
+
+set showmode
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" fix go definition with russian layout
+map пв gd
+
+let mapleader = " "
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+" Plug 'justinmk/vim-sneak'
+Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
+
+map <leader>e <Action>(ActivateProjectToolWindow)
+map <leader>r <Action>(ActivateProjectToolWindow)
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+map <leader>ne <Action>(NewElement)
+map <leader>ту <Action>(NewElement)
+
+map <leader>si <Action>(SelectIn)
+map <leader>ыш <Action>(SelectIn)
+
+" map <Tab> <Action>(NextTab)
+" map <S-Tab> <Action>(PreviousTab)
+map ]n <Action>(NextTab)
+map ]т <Action>(NextTab)
+map [b <Action>(PreviousTab)
+map [и <Action>(PreviousTab)
+" map <C-k> <Action>(NextSplitter)
+" map <C-j> <Action>(PrevSplitter)
+map <S-h> <Action>(NextSplitter)
+map <S-l> <Action>(PrevSplitter)
+
+" git
+map <leader>ga <Action>(Annotate)
+map <leader>пф <Action>(Annotate)
+
+map <leader>gu <Action>(Vcs.RollbackChangedLines)
+map <leader>пг <Action>(Vcs.RollbackChangedLines)
+
+map <leader>fu <Action>(FindUsages)
+map <leader>аг <Action>(FindUsages)
+
+map gn <Action>(GotoNextElementUnderCaretUsage)
+map пт <Action>(GotoNextElementUnderCaretUsage)
+
+map <leader>ls <Action>(FileStructurePopup)
+map <leader>ды <Action>(FileStructurePopup)
+
+map <leader>tt <Action>(ActivateTerminalToolWindow)
+
+map <leader>nh :nohl<CR>
+map <leader>тр :nohl<CR>
+map <leader>/ <Action>(Find)
+
+map gi <Action>(GotoImplementation)
+map пш <Action>(GotoImplementation)
+
+map sa <Action>(ShowIntentionActions)
+map ыф <Action>(ShowIntentionActions)
+
+map <leader>re <Action>(RenameElement)
+map <leader>ку <Action>(RenameElement)
+
+map<leader>c <Action>(CloseContent)
+map<leader>с <Action>(CloseContent)
+
+map<leader>C <Action>(CloseAllEditorsButActive)
+map<leader>С <Action>(CloseAllEditorsButActive)
+
+map<leader>[ <Action>(Back)
+map<leader>х <Action>(Back)
+
+map<leader>] <Action>(Back)
+map<leader>ъ <Action>(Back)
+
+map<leader>y <Action>(EditorDuplicate)
+map<leader>н <Action>(EditorDuplicate)
+
+map<leader>ff <Action>(SearchEverywhere)
+map<leader>аа <Action>(SearchEverywhere)
+
+map<leader>lf <Action>(ReformatCode)
+map<leader>да <Action>(ReformatCode)
+
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
